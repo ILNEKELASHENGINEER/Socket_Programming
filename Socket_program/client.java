@@ -8,21 +8,24 @@ import java.util.Scanner;
 public class client {
     public static void main(String []args) throws IOException {
         Scanner ins = new Scanner(System.in);
-        System.out.println("Enter your name to save in server");
-        String product=ins.next();
-        Socket sock = new Socket("127.0.0.1",9999);
-        System.out.println("Connected to network");
+        while(true) {
+            System.out.println("Enter your name to save in server");
+            String product = ins.next();
+            Socket sock = new Socket("127.0.0.1", 9999);
+            System.out.println("Connected to network");
 //        String product = "a";
-        InputStream in = sock.getInputStream();
-        OutputStream out = sock.getOutputStream();
+            InputStream in = sock.getInputStream();
+            OutputStream out = sock.getOutputStream();
 
-        out.write(product.getBytes());
+            out.write(product.getBytes());
 
-        byte[] newprod = new byte[100];
-        in.read(newprod);
+            byte[] newprod = new byte[100];
+            in.read(newprod);
 
-        String input = new String(newprod).trim();
-        System.out.println("Obtained message: "+input);
+            String input = new String(newprod).trim();
+            System.out.println("Obtained message: " + input);
 //        sock.close();
+            sock.close();
+        }
     }
 }

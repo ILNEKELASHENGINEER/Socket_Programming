@@ -3,10 +3,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
-//import com.mongodb.MongoClient;
 //import com.mongodb.MongoClientURI;
 //import com.mongodb.client.MongoDatabase;
 
@@ -31,10 +29,6 @@ public class server {
             System.out.println("Received product name :-> "+message);
             System.out.println("User "+message+" is connected Successfully");
 
-//            String output = prdtname.getproductinfo(message);
-//            if(output == null){
-//                output = "Invalid";
-//            }
             String output = "Server is successfully connected "+message;
             out.write(output.getBytes());
             System.out.println(output);
