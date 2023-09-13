@@ -4,7 +4,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
-
+import java.util.*;
 public class client2 {
     public static void main(String []args) throws IOException {
         Scanner ins = new Scanner(System.in);
