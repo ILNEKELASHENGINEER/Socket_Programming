@@ -1,6 +1,6 @@
 dummy file for documentation
 * implement self loop back socket programmin
 * need to implement client and server in different machines
-I need one dark box
+I dont did enough for this day
 
 
